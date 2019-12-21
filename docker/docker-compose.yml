@@ -1,0 +1,13 @@
+version: "3.6"
+
+services:
+  hunter-test-build:
+    image: bojoe/hunter-build-env-ubuntu
+    volumes:
+      - ${DOCKER_HOME}:/home/developer
+      - ${SRC_DIR}:/source
+      - ${BUILD_DIR}:/build
+      - ${POLLY_DIR}:/polly
+      - /tmp:/tmp
+    user: 0:0
+    
